@@ -1,0 +1,15 @@
+appId: com.cortex.app
+productName: Cortex
+directories:
+  buildResources: build
+  output: release
+files:
+  - out/**/*
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true

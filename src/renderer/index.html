@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      Content-Security-Policy is injected as a response header by the main process
+      (src/main/security/csp.ts), not here — img-src needs to change at runtime when the
+      user toggles "load remote images" in Settings, and a <meta> CSP tag can only ever be
+      tightened after the page has parsed, never relaxed.
+    -->
+    <title>Cortex</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
